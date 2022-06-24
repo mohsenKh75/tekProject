@@ -1,12 +1,12 @@
 import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import Image from "../../components/image";
-import Link from "../../components/Link";
+import Image from "../../components/image/image";
+import Link from "../../components/Link/mLink";
 import Logo from "../../logo.svg";
 
 function Login() {
   return (
-    <div className="h-100 bg-primary d-flex justify-content-center align-items-center">
+    <div className="min-vh-100 bg-primary d-flex justify-content-center align-items-center">
       <Container>
         <Row>
           <Col xs={10} md={8} lg={5} className="bg-white mx-auto rounded">
@@ -20,13 +20,13 @@ function Login() {
                   <h3>ورود</h3>
                   <Form.Control
                     size="lg"
-                    className="my-4 radius-4 p-3 pe-5 border border-dark"
+                    className="my-4 radius-4 p-3 pe-5 border border-dark text-right"
                     type="text"
                     placeholder="شماره موبایل"
                   />
                   <Form.Control
                     size="lg"
-                    className="radius-4 p-3 pe-5 border border-dark"
+                    className="radius-4 p-3 pe-5 border border-dark text-right"
                     type="password"
                     placeholder="رمز ورود"
                   />
@@ -37,7 +37,7 @@ function Login() {
                     variant="primary"
                     type="submit"
                     size="lg"
-                    className="rounded-pill w-100"
+                    className="rounded-pill w-100 text-light"
                   >
                     ورود
                   </Button>

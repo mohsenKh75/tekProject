@@ -1,6 +1,10 @@
 body {
   height: 100vh;
   direction: rtl;
+  flex-grow: 1;
+}
+html {
+  display: flex;
 }
 
 #root {
