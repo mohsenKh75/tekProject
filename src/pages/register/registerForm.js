@@ -7,8 +7,13 @@ import Logo from "../../logo.svg";
 function Register() {
   const [info, setInfo] = useState({ email: "", tel: "", pass: "" });
   const [status, setStatus] = useState({ customer: true, marketer: false });
+  const [submited, setSubmited] = useState(false);
   let shopper = status.customer;
   let salesman = status.marketer;
+
+  function submitHandler(e) {
+    e.preventDefault();
+  }
 
   function statusHandler(buyer, seller) {
     if (seller) {
@@ -49,7 +54,7 @@ function Register() {
             </div>
 
             <div className="mx-5">
-              <Form>
+              <Form onSubmit={e => submitHandler(e)}>
                 <h3>ثبت‌نام</h3>
                 <Form.Group className="mb-3" controlId="mobile">
                   <Form.Control
@@ -59,6 +64,7 @@ function Register() {
                     placeholder="شماره موبایل"
                     value={info.tel}
                     onChange={(e) => numhandler(e)}
+                    required
                   />
                 </Form.Group>
 
@@ -70,6 +76,7 @@ function Register() {
                     placeholder="ایمیل"
                     value={info.email}
                     onChange={(e) => emailHandler(e)}
+                    required
                   />
                 </Form.Group>
 
@@ -81,6 +88,7 @@ function Register() {
                     placeholder="رمز ورود"
                     value={info.pass}
                     onChange={(e) => passHandler(e)}
+                    required
                   />
                 </Form.Group>
 
@@ -104,6 +112,7 @@ function Register() {
                 </div>
 
                 <Col xs={10} md={8} lg={5} className="mx-auto mt-4">
+
                   <Button
                     variant="primary"
                     type="submit"
@@ -112,6 +121,7 @@ function Register() {
                   >
                     ثبت‌نام
                   </Button>
+
                 </Col>
               </Form>
             </div>

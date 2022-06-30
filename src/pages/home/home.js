@@ -19,6 +19,20 @@ function Home() {
           </Button>
         </Link>
       </div>
+      <div>
+        <Link url="/passwordField">
+          <Button variant="primary" type="submit" size="lg" className='text-light mx-3 px-2'>
+            کد عبور
+          </Button>
+        </Link>
+      </div>
+      <div>
+        <Link url="/mainpage">
+          <Button variant="primary" type="submit" size="lg" className='text-light mx-3 px-2'>
+            صفحه اصلی
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 }
