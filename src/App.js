@@ -1,9 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import { ROUTES } from "./routes/allRoutes";
+import "swiper/css/bundle";
 import Login from "./pages/login/loginForm";
 import Register from "./pages/register/registerForm";
 import MainPage from './pages/main/MainPage'
 import PasswordField from "./pages/passwordField/passwordField";
+import 'boxicons'
 import "./styles/index.scss";
 
 

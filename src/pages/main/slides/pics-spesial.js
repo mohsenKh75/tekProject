@@ -1,9 +1,8 @@
 import React from "react";
 import Stars from "./stars";
-import Image from "../../../components/image/image";
 import { ReactComponent as Pic } from '../../../components/image/pics/picItem.svg'
-import { ReactComponent as Pic2 } from '../../../components/image/pics/picItem2.svg'
-import { ReactComponent as Pic3 } from '../../../components/image/pics/picItem3.svg'
+import { ReactComponent as Pic2 } from '../../../components/image/pics/01.svg'
+import { ReactComponent as Pic3 } from '../../../components/image/pics/03.svg'
 
 function PicsSpecial() {
     return (

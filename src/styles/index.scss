@@ -56,4 +56,45 @@ input[type=number]:focus,
   .mobile-size {
     margin-left: 80vw;
   }
+
+  .mobile-baners {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .intro-background {
+    margin-bottom: 0;
+    background-size: cover;
+    width: 57vw;
+    height: 18vh;
+  }
+
+  .intro-background2 {
+    margin-bottom: 2vh;
+    background-size: cover;
+    width: 57vw;
+    height: 18vh;
+  }
+
+  small {
+    font-size: 1.4rem;
+  }
+
+  .slider {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    justify-content: center;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 2rem;
+  }
 }

@@ -4,14 +4,20 @@ import PicsGroup from "./slides/picsGroup";
 import Image from "../../components/image/image";
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import Link from "../../components/Link/mLink";
-import 'boxicons'
 import PicsSpecial from "./slides/pics-spesial";
+import SlideShow from "./slides/slideShow";
 import { ReactComponent as ShopSvg } from "../../components/image/shop.svg";
 import { ReactComponent as RegSvg } from "../../components/image/register.svg";
 import { ReactComponent as PlastAp } from "../../components/image/plastAp.svg";
 import { ReactComponent as MenuSvg } from "../../components/image/menu.svg";
+import Google from '../../components/image/Google.svg'
+import Apple from '../../components/image/Apple.svg'
+import Bazar from '../../components/image/Bazar.svg'
+import Etemad from '../../components/image/Etemad.svg'
+import KasboKar from '../../components/image/KasboKar.svg'
+import Saman from '../../components/image/Saman.svg'
 import Logo from "../../logo.svg";
-import { Container, Dropdown, Nav, Navbar, Row, Col, Form, Modal, Button, Fade } from "react-bootstrap";
+import { Container, Dropdown, Row, Col, Form, Button } from "react-bootstrap";
 
 function MainPage() {
     const [show, setShow] = useState(false);
@@ -118,7 +124,10 @@ function MainPage() {
                             </div>
                             <Row className="d-flex justify-content-around">
                                 <Col className="d-flex justify-content-center">
-                                    <Slides />
+                                    {/* <Slides /> */}
+                                    <SlideShow>
+
+                                    </SlideShow>
                                 </Col>
                             </Row>
                             <Row className="d-flex justify-content-center max-vw-100">
@@ -129,7 +138,7 @@ function MainPage() {
                                 </div>
                             </Row>
                             <Row className="d-flex flex-row justify-content-center align-items-center">
-                                <Col className="d-flex flex-row justify-content-center align-items-center my-5">
+                                <Col style={{ marginTop: '4vh' }} className="mobile-baners">
                                     <div className="intro-background d-flex flex-column justify-content-between">
                                         <small dir="rtl" className="text-main">فروشگاه سندپلاست در استان البرز</small>
                                         <div className="rebate1 bg-secondary">
@@ -140,7 +149,8 @@ function MainPage() {
                                         </div>
                                     </div>
                                     <div className="intro-background2 d-flex flex-column justify-content-between">
-                                        <small dir="rtl" className="text-main">فروشگاه سندپلاست در استان البرز
+                                        <small dir="rtl" className="text-main">فروش فوق العاده نایلون
+
                                             <br />
                                             <small dir="rtl" style={{ fontSize: '0.7rem' }}>طرح لبخند</small>
                                         </small>
@@ -173,9 +183,20 @@ function MainPage() {
                                                 </svg>
                                             </div>
                                         </div>
-                                        <div className="brands"></div>
-                                        <div className="brands"></div>
-                                        <div className="brands"></div>
+                                        <div className="d-flex flex-row flex-wrap justify-content-start align-items-center">
+                                            <div className="brands">
+                                                <Image width="10vw" height="auto" className="brands" src={Google} alt='avsf' />
+                                            </div>
+                                            <div className="brands">
+                                                <Image width="10vw" height="auto" className="brands" src={Apple} alt='avsf' />
+
+                                            </div>
+                                            <div className="brands">
+                                                <Image width="10vw" height="auto" className="brands" src={Bazar} alt='avsf' />
+                                            </div>
+                                        </div>
+
+
                                     </div>
                                     <div className="d-flex justify-content-around">
                                         <p className="app-download text-light mx-3 my-1">دانلود اپلیکیشن</p>
@@ -203,10 +224,10 @@ function MainPage() {
                             <div dir="ltr" className="my-5 d-flex flex-row justify-content-between">
                                 <div className="d-flex flex-column">
                                     <div className="d-flex flex-row justify-content-center">
-                                        <box-icon name='facebook-circle' type='logo' color='#fbfbfb' ></box-icon>
-                                        <box-icon name='instagram' type='logo' color='#fbfbfb' ></box-icon>
-                                        <box-icon name='telegram' type='logo' color='#fbfbfb' ></box-icon>
-                                        <box-icon name='twitter' type='logo' color='#fbfbfb' ></box-icon>
+                                        <box-icon className='pointer' name='facebook-circle' type='logo' color='#fbfbfb' ></box-icon>
+                                        <box-icon className='pointer' name='instagram' type='logo' color='#fbfbfb' ></box-icon>
+                                        <box-icon className='pointer' name='telegram' type='logo' color='#fbfbfb' ></box-icon>
+                                        <box-icon className='pointer' name='twitter' type='logo' color='#fbfbfb' ></box-icon>
                                     </div>
                                     <small className="text-light" style={{ fontSize: '0.6rem' }}>.ما را در شبکه های اجتماعی دنبال کنید</small>
                                 </div>
@@ -217,9 +238,15 @@ function MainPage() {
                                     </div>
                                     <box-icon name='headphone' animation='tada' color='#ffffff' ></box-icon>
                                 </div>
-                                <div className="namad"></div>
-                                <div className="namad"></div>
-                                <div className="namad"></div>
+                                <div className="namad">
+                                    <Image src={Etemad} alt='تجارت الکترونیک' />
+                                </div>
+                                <div className="namad">
+                                    <Image src={KasboKar} alt='کسب و کار مجازی' />
+                                </div>
+                                <div className="namad">
+                                    <Image src={Saman} alt='بانک سامان' />
+                                </div>
                             </div>
                         </footer>
 
