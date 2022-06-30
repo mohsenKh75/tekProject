@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Slides from "./slides/Slides";
+
 import PicsGroup from "./slides/picsGroup";
 import Image from "../../components/image/image";
 import Offcanvas from 'react-bootstrap/Offcanvas'
@@ -108,7 +108,7 @@ function MainPage() {
 
                                     <Form.Group className="hidden" controlId="formBasicEmail">
                                         <Form.Control
-                                            style={{ width: '25vw', borderBottom: 'none' }}
+                                            style={{ width: '24vw', borderBottom: 'none' }}
                                             dir='rtl'
                                             size="sm"
                                             className="rounded-pill p-1 no-border"
