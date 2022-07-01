@@ -13,8 +13,9 @@ function PicsGroup1({ className }) {
         <Stars size="2vw" fillColor="#009BE1" />
       </div>
       <div
+        style={{ backgroundColor: "#f7f7f7" }}
         dir="rtl"
-        className="d-flex flex-column justify-content-center align-items-center"
+        className="w-100 d-flex flex-column justify-content-center align-items-center"
       >
         <h5>نایلون طرح لبخند</h5>
         <small

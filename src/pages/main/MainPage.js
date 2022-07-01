@@ -38,33 +38,69 @@ function MainPage() {
             <Offcanvas.Header closeButton>
               <Offcanvas.Title>
                 {/* Don't use vw Koskesh! :)))) */}
-                <Image src={Logo} width="4vw" height="5vh" />
+                <div className="menu-logo">
+                  <Image src={Logo} width="4vw" height="5vh" />
+                </div>
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <div className="max-vh-100 d-flex flex-column justify-content-around align-items-center">
+              <div className="menu-items">
                 <div className="side-bar-item">
                   <Link url="/">
-                    <a className="side-bar-item">خانه</a>
+                    <h6 className="mobile-font-size" href="#">
+                      خانه
+                    </h6>
                   </Link>
                 </div>
                 <div className="side-bar-item">
                   <Link url="/register">
-                    <a className="side-bar-item">ثبت نام</a>
+                    <h6 className="mobile-font-size" href="#">
+                      ثبت نام
+                    </h6>
                   </Link>
                 </div>
                 <div className="side-bar-item">
                   <Link url="/login">
-                    <a className="side-bar-item">ورود</a>
+                    <h6 className="mobile-font-size" href="#">
+                      ورود
+                    </h6>
                   </Link>
                 </div>
                 <div className="side-bar-item">
-                  <a>تماس با ما</a>
+                  <Link url="/">
+                    <h6 className="mobile-font-size" href="#">
+                      تماس با ما
+                    </h6>
+                  </Link>
                 </div>
-                <a className="side-bar-item">تماس با ما</a>
-                <a className="side-bar-item">پشتیبانی</a>
-                <a className="side-bar-item">قوانین و مقررات</a>
-                <a className="side-bar-item">همکاری با ما</a>
+                <div className="side-bar-item">
+                  <Link url="/">
+                    <h6 className="mobile-font-size" href="#">
+                      تماس با ما
+                    </h6>
+                  </Link>
+                </div>
+                <div className="side-bar-item">
+                  <Link url="/">
+                    <h6 className="mobile-font-size" href="#">
+                      پشتیبانی
+                    </h6>
+                  </Link>
+                </div>
+                <div className="side-bar-item">
+                  <Link url="/">
+                    <h6 className="mobile-font-size" href="#">
+                      قوانین و مقررات
+                    </h6>
+                  </Link>
+                </div>
+                <div className="side-bar-item">
+                  <Link url="/">
+                    <h6 className="mobile-font-size" href="#">
+                      همکاری با ما
+                    </h6>
+                  </Link>
+                </div>
               </div>
             </Offcanvas.Body>
           </Offcanvas>
@@ -110,14 +146,14 @@ function MainPage() {
                 </div>
               </Col>
               <Col className="p-2 d-flex align-items-center">
-                <BrowserView>
+                <div>
                   <Image
                     src={MenuSvg}
                     width="20px"
                     onClick={handleShow}
                     className="pointer"
                   />
-                </BrowserView>
+                </div>
 
                 <div className="d-flex align-items-center me-5">
                   <Image src={Logo} width="20px" />
@@ -185,7 +221,10 @@ function MainPage() {
                   </Form.Group>
                 </div>
                 <div style={{ margin: "5px" }} className="hidden">
-                  <Button style={{ width: "20vw" }} className="rounded-pill">
+                  <Button
+                    style={{ width: "20vw", height: "7vh" }}
+                    className="rounded-pill"
+                  >
                     ادامه
                   </Button>
                 </div>
@@ -395,7 +434,7 @@ function MainPage() {
                       ></box-icon>
                     </div>
                     <p className="text-light text-center">
-                      .ما را در شبکه های اجتماعی دنبال کنید
+                      ما را در شبکه های اجتماعی دنبال کنید.
                     </p>
                   </div>
 

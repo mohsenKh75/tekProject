@@ -25,7 +25,7 @@ function PicsSpecial() {
           </div>
         </div>
         <div
-          style={{ backgroundColor: "#F1F9FD" }}
+          style={{ width: "100%", backgroundColor: "#F1F9FD" }}
           dir="rtl"
           className="d-flex flex-column justify-content-center align-items-center mx-auto py-5 px-3 px-3"
         >
@@ -65,7 +65,7 @@ function PicsSpecial() {
         </div>
 
         <div
-          style={{ backgroundColor: "#F1F9FD" }}
+          style={{ width: "100%", backgroundColor: "#F1F9FD" }}
           dir="rtl"
           className="d-flex flex-column justify-content-center align-items-center mx-auto py-5 px-3"
         >

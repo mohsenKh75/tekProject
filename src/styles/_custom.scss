@@ -20,6 +20,40 @@ html {
   background-size: cover;
 }
 
+.menu-items {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.side-bar-item {
+  cursor: pointer;
+  color: #005078;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 10px;
+  padding: 1rem;
+  width: 20vw;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.side-bar-item:hover {
+  border-radius: 5px;
+  color: #019be1;
+  position: relative;
+  background-color: #dfdfdf;
+  overflow: hidden;
+  width: 100%;
+}
+.menu-logo {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+}
+
 .intro-background {
   background-image: url(../../src/components/image/introBackground1.svg);
   background-position: center;
@@ -27,6 +61,7 @@ html {
   background-size: cover;
   width: 21vw;
   height: 18vh;
+  color: #f7f7f7;
 }
 
 .intro-background2 {
@@ -137,27 +172,6 @@ html {
 .footer-styles:nth-child(5) {
   border-right: none;
 }
-
-.side-bar-item {
-  cursor: pointer;
-  color: #005078;
-  font-size: 0.8rem;
-  text-align: center;
-  padding: 1rem;
-  width: 15vw;
-  text-decoration: none;
-  transition: 0.5s;
-}
-
-.side-bar-item:hover {
-  border-radius: 5px;
-  color: #019be1;
-  position: relative;
-  background-color: #dfdfdf;
-  overflow: hidden;
-  width: 100%;
-}
-
 //swiper silder
 
 .swiper {
@@ -236,4 +250,7 @@ html {
   justify-content: center;
   align-items: center;
   margin-top: 4vh;
+}
+.mobile-font-size {
+  text-decoration: none;
 }
