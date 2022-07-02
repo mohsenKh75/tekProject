@@ -3,16 +3,39 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import Image from "../../components/image/image";
 import Link from "../../components/Link/mLink";
 import Logo from "../../logo.svg";
+import axios from "axios";
 
 function Register() {
   const [info, setInfo] = useState({ email: "", tel: "", pass: "" });
   const [status, setStatus] = useState({ customer: true, marketer: false });
+  const [error, setError] = useState({})
   const [submited, setSubmited] = useState(false);
   let shopper = status.customer;
   let salesman = status.marketer;
 
-  function submitHandler(e) {
+
+  async function submitHandler(e) {
     e.preventDefault();
+    // let data = JSON.stringify({
+    //   mobile_phone_number: info.tel,
+    //   email: info.email,
+    //   password: info.pass
+    // })
+    try {
+      await axios.post('http://127.0.0.1:8001/User/', {
+        Headers: {
+          "Content-Type": "application/json"
+        },
+
+        email: info.email,
+        mobile_phone_number: info.tel,
+        password: info.pass
+
+      })
+    } catch (err) {
+      let error = JSON.parse(err.request.responseText);
+      setError(error)
+    }
   }
 
   function statusHandler(buyer, seller) {
@@ -67,7 +90,8 @@ function Register() {
                     required
                   />
                 </Form.Group>
-
+                <div>{error.email}</div>
+                <div>{error.mobile_phone_number}</div>
                 <Form.Group className="mb-3" controlId="email">
                   <Form.Control
                     size="lg"

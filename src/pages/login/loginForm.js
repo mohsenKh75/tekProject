@@ -1,5 +1,8 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import axios from "axios";
+import { useRecoilState } from 'recoil';
+import { isLoggedIn } from "./loginAtom";
 import Image from "../../components/image/image";
 import Link from "../../components/Link/mLink";
 import Logo from "../../logo.svg";
@@ -8,11 +11,15 @@ import Logo from "../../logo.svg";
 
 
 function Login() {
-  const [info, setInfo] = useState({tel: "", pass: "" });
-  const [submited, setSubmited ] = useState(false);
-  
+  const [loggedIn, setLoggedIn] = useRecoilState(isLoggedIn);
+  const [info, setInfo] = useState({ tel: "", pass: "" });
+  const [submited, setSubmited] = useState(false);
+
   function submitHandler(e) {
     e.preventDefault();
+    // axios.get('http://127.0.0.1:8001/User/').then(resp => {
+    // console.log(resp.data.results.map(result => result.user_id));
+    // })
   }
   function numhandler(e) {
     let numbers = /^[0-9]+$/;
